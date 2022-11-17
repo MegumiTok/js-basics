@@ -1,6 +1,4 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Marmelad&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Mali:ital,wght@1,400&display=swap");
 /* https://codepen.io/t_afif/pen/abKyJNJ */
 /* アニメーション =========================== */
 input {
@@ -62,13 +60,30 @@ button {
   border: none;
 }
 
-/* ================================*/
+/* ボタンを押したら入力画面が現れる================================*/
 #textarea-appear {
   display: none;
 }
 
 #checkButton {
   display: none;
+}
+
+/* description================================*/
+.bg {
+  background: #F2DCA2;
+}
+
+.description {
+  font-size: 1.5em;
+  padding: 15px;
+}
+
+/* マジックパレット================================*/
+.tile {
+  height: 100px;
+  width: 25%;
+  float: left;
 }
 
 /* ================================*/
@@ -90,14 +105,15 @@ body {
   padding-left: 40px;
   display: grid;
   background: white;
+  margin-bottom: 45px;
 }
 
 h1 {
-  font-family: "Marmelad", sans-serif;
   font-size: 3em;
-  margin: 8px;
+  margin-top: 15px;
+  margin-bottom: 30px;
 }
 
 h2 {
-  margin: 8px;
+  font-size: 2em;
 }/*# sourceMappingURL=js_1.css.map */
