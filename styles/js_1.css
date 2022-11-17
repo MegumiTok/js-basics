@@ -1,0 +1,103 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Marmelad&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mali:ital,wght@1,400&display=swap");
+/* https://codepen.io/t_afif/pen/abKyJNJ */
+/* アニメーション =========================== */
+input {
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 5px;
+  margin-left: 0;
+  font-size: 20px;
+  --c: #229091;
+  /* the color*/
+  box-shadow: 0 0 0 0.1em inset var(--c);
+  --_g: linear-gradient(var(--c) 0 0) no-repeat;
+  background: var(--_g) calc(var(--_p, 0%) - 100%) 0%, var(--_g) calc(200% - var(--_p, 0%)) 0%, var(--_g) calc(var(--_p, 0%) - 100%) 100%, var(--_g) calc(200% - var(--_p, 0%)) 100%;
+  background-size: 50.5% calc(var(--_p, 0%) / 2 + 0.5%);
+  outline-offset: 0.1em;
+  transition: background-size 0.4s, background-position 0s 0.4s;
+}
+
+input:hover {
+  --_p: 100%;
+  transition: background-position 0.4s, background-size 0s;
+}
+
+input:active {
+  box-shadow: 0 0 9000000000q inset rgba(0, 0, 0, 0.6);
+  background-color: var(--c);
+  color: #fff;
+}
+
+button {
+  margin-bottom: 10px;
+  --c: #229091;
+  /* the color*/
+  box-shadow: 0 0 0 0.1em inset var(--c);
+  --_g: linear-gradient(var(--c) 0 0) no-repeat;
+  background: var(--_g) calc(var(--_p, 0%) - 100%) 0%, var(--_g) calc(200% - var(--_p, 0%)) 0%, var(--_g) calc(var(--_p, 0%) - 100%) 100%, var(--_g) calc(200% - var(--_p, 0%)) 100%;
+  background-size: 50.5% calc(var(--_p, 0%) / 2 + 0.5%);
+  outline-offset: 0.1em;
+  transition: background-size 0.4s, background-position 0s 0.4s;
+}
+
+button:hover {
+  --_p: 100%;
+  transition: background-position 0.4s, background-size 0s;
+}
+
+button:active {
+  box-shadow: 0 0 9000000000q inset rgba(0, 0, 0, 0.6);
+  background-color: var(--c);
+  color: #fff;
+}
+
+button {
+  font-family: system-ui, sans-serif;
+  font-size: 3.5rem;
+  cursor: pointer;
+  padding: 0.1em 0.6em;
+  font-weight: bold;
+  border: none;
+}
+
+/* ================================*/
+#textarea-appear {
+  display: none;
+}
+
+#checkButton {
+  display: none;
+}
+
+/* ================================*/
+* {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+}
+
+body {
+  height: 100%;
+  width: 80vw;
+  padding: 0;
+  margin: 0;
+  padding-left: 40px;
+  display: grid;
+  background: white;
+}
+
+h1 {
+  font-family: "Marmelad", sans-serif;
+  font-size: 3em;
+  margin: 8px;
+}
+
+h2 {
+  margin: 8px;
+}/*# sourceMappingURL=js_1.css.map */
