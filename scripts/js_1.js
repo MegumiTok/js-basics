@@ -3,13 +3,13 @@ const removeSpaces = document.querySelector("#textarea_remove_spaces");
 const output = document.querySelector("#output");
 const clickRemoveSpaces = document.querySelector("#click_remove_spaces");
 
-function butotnClick() {
+function btnClick() {
     let str = removeSpaces.value;
     str = str.replace(/\s/g, '')
     // str = str.replace(/\s+/g, '')
     output.innerText = str;
 }
-clickRemoveSpaces.addEventListener("click", butotnClick)
+clickRemoveSpaces.addEventListener("click", btnClick)
 
 // 文字数カウント
 const textareaCount = document.getElementById("textarea_count")
