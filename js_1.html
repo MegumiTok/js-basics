@@ -12,9 +12,9 @@
 <body>
     <h1>JavaScript basics</h1>
     <h2>event</h2>
-    <p>参考:</p>
+    <p>参考:
     <a href=" https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events">Introduction to
-        events</a>
+        events</a></p>
 
     <!-- 空白削除ツール -->
     <h1># 空白削除ツール</h1>
@@ -36,6 +36,16 @@
         <input type="button" value="隠す" id="check_hide">
     </div>
 
+    <!-- 文字の色を変える -->
+    <h1># 文字の色を変える</h1>
+    <button id="btn-color" style="--c:#E95A49">Change my color</button>
+    <div>
+        <h3>▼色を変える機能をabortする</h3>
+        <input type="button" value="abort" id="btn-abort">
+        <p class="bg description">
+            ■ Removing listeners<br>
+            For simple, small programs, cleaning up old, unused event handlers isn't necessary, but for larger, more complex programs, it can improve efficiency. Also, the ability to remove event handlers allows you to have the same button performing different actions in different circumstances: all you have to do is add or remove handlers.</p>
+    </div>
     <!-- JS -->
     <script type="text/javascript" src="scripts/js_1.js"></script>
 </body>

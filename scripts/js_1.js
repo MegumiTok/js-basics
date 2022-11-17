@@ -39,3 +39,25 @@ function butotnClick() {
 }
 
 checkHide.addEventListener("click", butotnClick)
+
+//文字の色を変える
+const btnColor = document.getElementById("btn-color")
+
+function randomColor(number){
+    return Math.floor(Math.random() * (number + 1))
+ }
+
+//  to add an event handler that we can remove with an AbortSignal
+const controller = new AbortController();
+
+btnColor.addEventListener("click", ()=>{
+    const rndCol = `rgb(${randomColor(255)}, ${randomColor(255)}, ${randomColor(255)})`
+    // document.body.style.backgroundColor = rndCol
+    btnColor.style.color =  rndCol
+ },{signal: controller.signal})
+
+ const btnRemove = document.getElementById("btn-abort")
+
+ btnRemove.addEventListener("click",()=>{
+    controller.abort(); // removes any/all event handlers associated with this controller
+ })
