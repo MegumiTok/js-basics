@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript basics</title>
+    <link rel="stylesheet" href="styles/js_2.css">
+</head>
+
+<body>
+    <h1>JavaScript basics</h1>
+    <h2>clipboardにコピー</h2>
+
+    <!-- 空白削除ツール -->
+    <div class="container">
+    <h2># 空白削除ツール</h1>
+        <textarea rows="8" cols="70" id="textarea_remove_spaces"></textarea>
+
+        <button id="click_remove_spaces" class="btn click">実行&コピー</button>
+        <!-- <button id="click_remove_spaces" class="btn click" onclick="removeSpaces()">Click</button> -->
+        <!-- <button  id="inputText" class="btn click" onclick="copyText()">Copy Text</button> -->
+        <p>▼ 結果</p>
+        <p class="font" id="output"></p>
+    </div>
+
+        <!-- 入力した文字をクリップボードにコピー -->
+        <h2># 入力した文字をクリップボードにコピー </h1>
+        <!-- <textarea rows="8" cols="70" id="inputText"></textarea> -->
+        <input type="text" value="Hello World" id="inputText">
+  
+        <div class="tooltip">
+            <button onclick="copyText()" onmouseout="outFunc()" class="click">
+                <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
+                    Copy text
+            </button>
+        </div>
+
+    <!-- JS -->
+    <script type="text/javascript" src="scripts/js_2.js"></script>
+</body>
+
+</html>
