@@ -29,6 +29,12 @@ h1 {
 
 h2 {
   font-size: 2em;
+  margin-top: 15px;
+  margin-bottom: 30px;
+}
+
+.container {
+  margin-bottom: 75px;
 }
 
 /* アニメーション =========================== */
@@ -72,31 +78,49 @@ h2 {
   font-weight: bold;
   border: none;
   margin-top: 15px;
-  width: 10rem;
+  width: 30%;
 }
 
-/* ボタンを押したら入力画面が現れる================================*/
-#textarea-appear {
-  display: none;
+/* tooltip =========================== */
+.tooltip {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 45px;
 }
 
-#check_hide {
-  display: none;
+.tooltip .tooltiptext {
+  visibility: hidden;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  top: 20%;
+  left: 40%;
+  margin-left: -75px;
+  opacity: 0;
+  transition: opacity 0.3s;
 }
 
-/* description================================*/
-.bg {
-  background: #F2DCA2;
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  margin-left: -5px;
+  border-width: -5px;
+  border-style: solid;
+  transform: rotate(90deg);
+  border-color: #555 transparent transparent transparent;
 }
 
-.description {
-  font-size: 1.5em;
-  padding: 15px;
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
 }
 
-/* マジックパレット================================*/
-.tile {
-  height: 100px;
-  width: 25%;
-  float: left;
-}/*# sourceMappingURL=js_1.css.map */
+.font {
+  font-size: 2em;
+}/*# sourceMappingURL=js_2.css.map */

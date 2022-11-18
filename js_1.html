@@ -11,16 +11,18 @@
 
 <body>
     <h1>JavaScript basics</h1>
-    <h2>event</h2>
+    <h2>addEventListener</h2>
     <p>参考:
-    <a href=" https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events">Introduction to
-        events</a></p>
+        <a href=" https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events">Introduction to
+            events</a>
+    </p>
 
     <!-- 空白削除ツール -->
     <h1># 空白削除ツール</h1>
     <textarea rows="8" cols="70" id="textarea_remove_spaces"></textarea>
 
-    <input type="button" value="Click" id="click_remove_spaces" class="click">
+    <!-- <input type="button" value="Click" id="click_remove_spaces" class="click"> -->
+    <button id="click_remove_spaces" class="btn click">Click</button>
 
     <div id="output"></div>
 
@@ -30,21 +32,26 @@
 
     <!-- ボタンを押したら入力画面が現れる -->
     <h1># ボタンを押したら入力画面が現れる</h1>
-    <button id="btn-appear" style="--c:#E95A49">Click me!</button>
+    <button id="btn-appear" class="btn">Click me!</button>
     <p><textarea id="textarea-appear" name="textarea" rows="8" cols="80"></textarea></p>
     <div>
-        <input type="button" value="隠す" id="check_hide">
+        <!-- <input type="button" value="隠す" id="check_hide"> -->
+        <button id="check_hide" class="btn click">隠す</button>
     </div>
 
     <!-- 文字の色を変える -->
     <h1># 文字の色を変える</h1>
-    <button id="btn-color" style="--c:#E95A49">Change my color</button>
+    <button id="btn-color" class="btn" style="--c:#E95A49">Change my color</button>
     <div>
         <h3>▼色を変える機能をabortする</h3>
-        <input type="button" value="abort" id="btn-abort">
+        <!-- <input type="button" value="abort" id="btn-abort"> -->
+        <button type="button"  id="btn-abort" class="btn click">abort</button>
         <p class="bg description">
             ■ Removing listeners<br>
-            For simple, small programs, cleaning up old, unused event handlers isn't necessary, but for larger, more complex programs, it can improve efficiency. Also, the ability to remove event handlers allows you to have the same button performing different actions in different circumstances: all you have to do is add or remove handlers.</p>
+            For simple, small programs, cleaning up old, unused event handlers isn't necessary, but for larger, more
+            complex programs, it can improve efficiency. Also, the ability to remove event handlers allows you to have
+            the same button performing different actions in different circumstances: all you have to do is add or remove
+            handlers.</p>
     </div>
 
     <!-- マジックパレット -->
@@ -66,7 +73,7 @@
         <div class="tile"></div>
         <div class="tile"></div>
         <div class="tile"></div>
-      </div>
+    </div>
     <!-- JS -->
     <script type="text/javascript" src="scripts/js_1.js"></script>
 </body>
