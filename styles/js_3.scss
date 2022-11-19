@@ -1,0 +1,155 @@
+/* https://codepen.io/t_afif/pen/abKyJNJ */
+// https://codepen.io/ricardozea/pen/ZELyVP
+
+
+$spacing: 15px;
+$b: #83dcd6;
+* {
+    box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+}
+
+body {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    margin: $spacing*2 auto;
+    margin-bottom: $spacing*3;
+    background-color: #fcc7c9;
+    // text-align: center;
+    width: 80vw;
+}
+
+h1 {
+    // font-family: "Marmelad", sans-serif;
+    font-size: 3em;
+    margin-top: $spacing;
+    margin-bottom: $spacing*2;
+}
+
+h2 {
+    font-size: 2em;
+    margin-top: $spacing;
+    margin-bottom: $spacing;
+}
+
+.container {
+    margin-bottom: $spacing*5;
+    // background-color:rgba(23, 23, 23, 0.4);
+    padding: $spacing*2 ;
+    padding-bottom: $spacing*3;
+
+}
+
+textarea {
+    width: 100%;
+    font-size: 2em;
+    box-sizing: border-box;
+    border: 3px solid rgba(0, 0, 0, 0);
+    resize: vertical; // <---　ポイント
+}
+
+
+
+/* アニメーション =========================== */
+.btn {
+    margin-bottom: 10px;
+    --c: #02b4b7;
+    /* the color*/
+
+    box-shadow: 0 0 0 .1em inset var(--c);
+    --_g: linear-gradient(var(--c) 0 0) no-repeat;
+    background:
+        var(--_g) calc(var(--_p, 0%) - 100%) 0%,
+        var(--_g) calc(200% - var(--_p, 0%)) 0%,
+        var(--_g) calc(var(--_p, 0%) - 100%) 100%,
+        var(--_g) calc(200% - var(--_p, 0%)) 100%;
+    background-size: 50.5% calc(var(--_p, 0%)/2 + .5%);
+    outline-offset: .1em;
+    transition: background-size .4s, background-position 0s .4s;
+}
+
+.btn:hover {
+    --_p: 100%;
+    transition: background-position .4s, background-size 0s;
+}
+
+.btn:active {
+    box-shadow: 0 0 9e9q inset #0009;
+    background-color: var(--c);
+    color: #fff;
+}
+
+.btn {
+    font-family: system-ui, sans-serif;
+    font-size: 3.5rem;
+    cursor: pointer;
+    padding: .1em .6em;
+    font-weight: bold;
+    border: none;
+
+
+}
+
+.click {
+    font-family: system-ui, sans-serif;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: .1em .6em;
+    font-weight: bold;
+    border: none;
+    margin-top: $spacing;
+    width: 100%;
+
+    // margin-bottom: 0;
+}
+
+
+// 空白削除ツール =======================
+.font {
+    font-size: 2em;
+    font-weight: 500;
+}
+
+// down-triangle
+@mixin triangle($direction, $size, $color) {
+	width: 0;
+	height: 0;
+
+	@if $direction == 'up' { 
+		border-right: $size solid transparent;
+		border-bottom: $size * 1.732 solid $color; 
+		border-left: $size solid transparent; 
+	} @else if $direction == 'down' {
+		border-top: $size * .732 solid $color; 
+		border-right: $size solid transparent; 
+		border-left: $size solid transparent; 
+	} @else if $direction == 'left' {
+		border-top: $size solid transparent; 
+		border-right: $size * 1.732 solid $color; 
+		border-bottom: $size solid transparent; 
+	} @else if $direction == 'right' {
+		border-top: $size solid transparent; 
+		border-bottom: $size solid transparent; 
+		border-left: $size * 1.732 solid $color; 
+	}
+}
+
+.down-triangle {
+	@include triangle(down, 60px, $b );
+}
+
+.position{
+    position: relative;
+    top: -8px;
+
+    &_2{
+        position: relative;
+        top: -15px;
+    }
+}
