@@ -1,0 +1,126 @@
+@charset "UTF-8";
+/* https://codepen.io/t_afif/pen/abKyJNJ */
+* {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+}
+
+body {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  margin: 30px auto;
+  margin-bottom: 120px;
+  background-color: #fcc7c9;
+  width: 80vw;
+}
+
+h1 {
+  font-size: 3em;
+  margin-top: 15px;
+  margin-bottom: 30px;
+}
+
+h2 {
+  font-size: 2em;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.container {
+  margin-bottom: 45px;
+  padding: 30px;
+  padding-bottom: 22.5px;
+}
+
+textarea {
+  width: 100%;
+  font-size: 2em;
+  box-sizing: border-box;
+  border: 3px solid rgba(0, 0, 0, 0);
+  resize: vertical;
+}
+
+.textarea_line {
+  font-size: 1rem;
+}
+
+/* アニメーション =========================== */
+.btn {
+  margin-bottom: 10px;
+  --c: #02b4b7;
+  /* the color*/
+  box-shadow: 0 0 0 0.1em inset var(--c);
+  --_g: linear-gradient(var(--c) 0 0) no-repeat;
+  background: var(--_g) calc(var(--_p, 0%) - 100%) 0%, var(--_g) calc(200% - var(--_p, 0%)) 0%, var(--_g) calc(var(--_p, 0%) - 100%) 100%, var(--_g) calc(200% - var(--_p, 0%)) 100%;
+  background-size: 50.5% calc(var(--_p, 0%) / 2 + 0.5%);
+  outline-offset: 0.1em;
+  transition: background-size 0.4s, background-position 0s 0.4s;
+}
+
+.btn:hover {
+  --_p: 100%;
+  transition: background-position 0.4s, background-size 0s;
+}
+
+.btn:active {
+  box-shadow: 0 0 9000000000q inset rgba(0, 0, 0, 0.6);
+  background-color: var(--c);
+  color: #fff;
+}
+
+.btn {
+  font-family: system-ui, sans-serif;
+  font-size: 3.5rem;
+  cursor: pointer;
+  padding: 0.1em 0.6em;
+  font-weight: bold;
+  border: none;
+}
+
+.click {
+  font-family: system-ui, sans-serif;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 0.1em 0.6em;
+  font-weight: bold;
+  border: none;
+  margin-top: 15px;
+  width: 100%;
+}
+
+.font {
+  font-size: 2em;
+  font-weight: 500;
+}
+.font_big {
+  font-size: 3em;
+}
+
+.result {
+  float: left;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.down-triangle {
+  width: 0;
+  height: 0;
+  border-top: 43.92px solid #83dcd6;
+  border-right: 60px solid transparent;
+  border-left: 60px solid transparent;
+}
+
+.position {
+  position: relative;
+  top: -8px;
+}
+.position_2 {
+  position: relative;
+  top: -15px;
+}/*# sourceMappingURL=js_4.css.map */
