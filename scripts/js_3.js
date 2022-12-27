@@ -3,6 +3,8 @@ const removeSpaces = document.querySelector("#textarea_remove_spaces");
 const output = document.querySelector("#output");
 const clickRemoveSpaces = document.querySelector("#click_remove_spaces");
 
+
+
 function btnClick() {
     let str = removeSpaces.value;
     str = str.replace(/\s/g, '')
@@ -12,7 +14,6 @@ function btnClick() {
 }
 clickRemoveSpaces.addEventListener("click", btnClick)
 
-// 二個目のおまけの方==============================
 const copyText = () => {
     const inputText = document.getElementById("inputText")
 
@@ -29,5 +30,4 @@ const copyText = () => {
     tooltip.innerHTML = "Copied: " + inputText.value;
 
 }
-
 
