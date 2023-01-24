@@ -101,6 +101,9 @@ textarea {
 .font_big {
   font-size: 3em;
 }
+.font_sm {
+  font-size: 1em;
+}
 
 .result {
   float: left;
