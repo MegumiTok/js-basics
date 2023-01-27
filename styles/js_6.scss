@@ -1,0 +1,124 @@
+/* https://codepen.io/t_afif/pen/abKyJNJ */
+// https://codepen.io/ricardozea/pen/ZELyVP
+
+@import 'https://fonts.googleapis.com/css?family=Montserrat:300,400,700';
+
+$spacing: 15px;
+$b: #83dcd6;
+$brown:#605c56;
+
+* {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    color: $brown
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+}
+
+body {
+ 
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    margin: $spacing*2 auto;
+    margin-bottom: $spacing*8;
+    background-color: #fcc7c9;
+    // text-align: center;
+    width: 80vw;
+    
+}
+
+body>h1 {
+    // font-family: "Marmelad", sans-serif;
+    font-size: 3em;
+    margin-top: $spacing;
+    margin-bottom: $spacing*2;
+    text-align: center;
+
+}
+
+.container>h2 {
+    font-size: 2em;
+    margin-top: $spacing;
+    margin-bottom: $spacing;
+    background: #f7f7f7;
+    border-left: solid $b 5px;
+    padding: 14px 12px;
+    // border-bottom: solid 3px #dadada;
+    clear: both;
+
+}
+
+.container {
+    margin-bottom: $spacing*3;
+    // background-color:rgba(23, 23, 23, 0.4);
+    padding: $spacing*2 ;
+    padding-bottom: $spacing*1.5;
+
+}
+
+textarea {
+    width: 100%;
+    font-size: 2em;
+    box-sizing: border-box;
+    // border: 3px solid rgba(0, 0, 0, 0);
+    box-shadow: 0 2px 6px rgb(19 19 19 / 15%), 0 -2px 4px rgb(19 19 19 / 15%);
+    resize: vertical; // <---　ポイント
+}
+
+.textarea_line {
+    font-size: 1rem;
+}
+
+.arrow{
+    display: flex;
+    margin: 2em 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn {
+
+    font-size: 1rem;
+    cursor: pointer;
+    padding: .5em ;
+    font-weight: bold;
+   margin: 1em .2em;
+    background: $b;
+    border: none;
+    border-bottom: 3px solid #5c9b97;
+    border-radius: 10px;
+
+}
+
+
+
+/************************************
+** 結果出力
+************************************/
+.font {
+    font-size: 2em;
+    font-weight: 500;
+
+    &_big {
+        font-size: 3em;
+    }
+
+    &_sm {
+        font-size: 1em;
+    }
+}
+
+.result {
+    float: left;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+
+
+
