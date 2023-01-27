@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript basics</title>
+    <link rel="stylesheet" href="../styles/js_6.css">
+    <script src="jquery-3.6.3.min.js"></script>
+</head>
+
+<body>
+    <h1>JavaScriptで作る便利ツール</h1>
+
+
+    <!-- 空白削除ツール -->
+    <div class="container">
+        <h2>空白削除ツール</h1>
+            <textarea rows="8" cols="30" id="textarea_remove_spaces"></textarea>
+            <div class="arrow">
+                <svg width="130" height="87" viewBox="0 0 130 87" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="41" width="48" height="50" rx="5" fill="#83DCD6" />
+                    <path
+                        d="M68.4869 83.011C66.5459 84.8997 63.4541 84.8997 61.5131 83.011L18.007 40.6774C14.7908 37.5479 17.0064 32.094 21.4939 32.094L108.506 32.094C112.994 32.094 115.209 37.5479 111.993 40.6774L68.4869 83.011Z"
+                        fill="#83DCD6" />
+                </svg>
+
+                <button id="click_remove_spaces" class="btn">実行&コピー</button>
+            </div>
+            <p class="font" id="output"></p>
+    </div>
+
+    <div class="container">
+        <h2>Count number of lines in text</h1>
+            <!-- <p><code>split()</code></p> -->
+            <textarea class="textarea_line" rows="20" cols="30" id="textarea_countLines"></textarea>
+
+            <div class="arrow">
+                <svg width="130" height="87" viewBox="0 0 130 87" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="41" width="48" height="50" rx="5" fill="#83DCD6" />
+                    <path
+                        d="M68.4869 83.011C66.5459 84.8997 63.4541 84.8997 61.5131 83.011L18.007 40.6774C14.7908 37.5479 17.0064 32.094 21.4939 32.094L108.506 32.094C112.994 32.094 115.209 37.5479 111.993 40.6774L68.4869 83.011Z"
+                        fill="#83DCD6" />
+                </svg>
+
+                <button id="click_count_lines" class="btn">実行&コピー</button>
+            </div>
+            <p class="result">入力した行数は：</p>
+
+            <p class="font font_big" id="output_lines"></p>
+    </div>
+
+
+    <!-- Remove blank lines =====================-->
+    <div class="container">
+        <h2>Remove blank lines</h1>
+            <textarea class="textarea_line" rows="40" cols="30" id="textarea_removeLines"></textarea>
+
+            <div class="arrow">
+                <svg width="130" height="87" viewBox="0 0 130 87" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="41" width="48" height="50" rx="5" fill="#83DCD6" />
+                    <path
+                        d="M68.4869 83.011C66.5459 84.8997 63.4541 84.8997 61.5131 83.011L18.007 40.6774C14.7908 37.5479 17.0064 32.094 21.4939 32.094L108.506 32.094C112.994 32.094 115.209 37.5479 111.993 40.6774L68.4869 83.011Z"
+                        fill="#83DCD6" />
+                </svg>
+
+                <button id="click_remove_lines" class="btn">実行&コピー</button>
+            </div>
+            <p class="font font_sm" id="output_removed_lines"></p>
+    </div>
+
+    <!-- JS -->
+    <script type="text/javascript" src="../scripts/js_5.js"></script>
+</body>
+
+</html>
