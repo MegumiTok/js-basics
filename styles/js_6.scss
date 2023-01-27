@@ -5,7 +5,7 @@
 
 $spacing: 15px;
 $b: #83dcd6;
-$brown:#605c56;
+$brown: #605c56;
 
 * {
     box-sizing: border-box;
@@ -20,7 +20,7 @@ $brown:#605c56;
 }
 
 body {
- 
+
     height: 100%;
     padding: 0;
     margin: 0;
@@ -29,7 +29,7 @@ body {
     background-color: #fcc7c9;
     // text-align: center;
     width: 80vw;
-    
+
 }
 
 body>h1 {
@@ -46,7 +46,7 @@ body>h1 {
     margin-top: $spacing;
     margin-bottom: $spacing;
     background: #f7f7f7;
-    border-left: solid $b 5px;
+    border-left: solid $brown 5px;
     padding: 14px 12px;
     // border-bottom: solid 3px #dadada;
     clear: both;
@@ -59,6 +59,13 @@ body>h1 {
     padding: $spacing*2 ;
     padding-bottom: $spacing*1.5;
 
+    label {
+        background-color: #605c56;
+        color: white;
+        padding: .3em 1em;
+
+
+    }
 }
 
 textarea {
@@ -74,20 +81,30 @@ textarea {
     font-size: 1rem;
 }
 
-.arrow{
+/************************************
+** ボタン
+************************************/
+.arrow {
     display: flex;
     margin: 2em 0;
     align-items: center;
     justify-content: center;
+
+    &_row {
+        justify-content: flex-start;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-right: 1em;
+        align-items: center;
+    }
 }
 
 .btn {
-
     font-size: 1rem;
     cursor: pointer;
-    padding: .5em ;
+    padding: .5em;
     font-weight: bold;
-   margin: 1em .2em;
+    margin: .2em;
     background: $b;
     border: none;
     border-bottom: 3px solid #5c9b97;
@@ -95,7 +112,18 @@ textarea {
 
 }
 
+.btn:hover {
+    transform: translateY(1px)
+}
 
+.btn:active {
+    border-bottom-color: transparent;
+    transform: translateY(3px)
+}
+
+.btn:focus {
+    animation: flashing 1s ease infinite
+}
 
 /************************************
 ** 結果出力
@@ -103,9 +131,10 @@ textarea {
 .font {
     font-size: 2em;
     font-weight: 500;
+    overflow-wrap: break-word;
 
     &_big {
-        font-size: 3em;
+        font-size: 8em;
     }
 
     &_sm {
@@ -113,12 +142,68 @@ textarea {
     }
 }
 
-.result {
-    float: left;
-    margin-left: 1rem;
-    margin-right: 1rem;
+// Count number of lines in text ====
+.result_count {
+    margin: auto 1em;
+    padding: 1.5em;
+    display: flex;
+    justify-content: center;
+    width: 10%;
+
+
+    &_container {
+        display: flex;
+    }
 }
 
 
 
 
+
+
+// Remove blank lines ,空白削除ツール ===
+#output,
+#output_removed_lines,
+#output_html_escape {
+    padding: 2em .2em;
+    background-color: white;
+    box-shadow: 0 2px 6px rgb(19 19 19 / 15%), 0 -2px 4px rgb(19 19 19 / 15%);
+}
+
+/************************************
+** HTML Escape
+************************************/
+tr:nth-of-type(odd) {
+    background: #5c9b97;
+}
+
+table{
+    background: $b;
+    border-collapse: separate;
+    text-indent: initial;
+    border-spacing: 2px;
+    margin-top: 1em;
+    margin-bottom: 2em;
+}
+    
+
+
+td {
+    padding: .5em;
+    empty-cells: show;
+    border: 1px solid #5c9b97;
+}
+
+.tbl th {
+    text-align: center;
+
+    padding: 2px;
+    empty-cells: show;
+    border: 1px solid #5c9b97;
+}
+
+
+th,td{
+    color: white;
+    font-weight: bold;
+}

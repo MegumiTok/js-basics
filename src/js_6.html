@@ -17,9 +17,10 @@
     <!-- 空白削除ツール -->
     <div class="container">
         <h2>空白削除ツール</h1>
+            <!-- <label for="field">▼空白削除したい文字列を入力</label> -->
             <textarea rows="8" cols="30" id="textarea_remove_spaces"></textarea>
             <div class="arrow">
-                <svg width="130" height="87" viewBox="0 0 130 87" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg width="130" height="67" viewBox="0 0 130 87" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect x="41" width="48" height="50" rx="5" fill="#83DCD6" />
                     <path
                         d="M68.4869 83.011C66.5459 84.8997 63.4541 84.8997 61.5131 83.011L18.007 40.6774C14.7908 37.5479 17.0064 32.094 21.4939 32.094L108.506 32.094C112.994 32.094 115.209 37.5479 111.993 40.6774L68.4869 83.011Z"
@@ -28,27 +29,39 @@
 
                 <button id="click_remove_spaces" class="btn">実行&コピー</button>
             </div>
+            <!-- <textarea class="font" id="output"></textarea> -->
+            <label for="field">▼結果</label>
             <p class="font" id="output"></p>
     </div>
 
+
+    <!-- Count number of lines in text -->
     <div class="container">
         <h2>Count number of lines in text</h1>
-            <!-- <p><code>split()</code></p> -->
+
             <textarea class="textarea_line" rows="20" cols="30" id="textarea_countLines"></textarea>
 
-            <div class="arrow">
-                <svg width="130" height="87" viewBox="0 0 130 87" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect x="41" width="48" height="50" rx="5" fill="#83DCD6" />
-                    <path
-                        d="M68.4869 83.011C66.5459 84.8997 63.4541 84.8997 61.5131 83.011L18.007 40.6774C14.7908 37.5479 17.0064 32.094 21.4939 32.094L108.506 32.094C112.994 32.094 115.209 37.5479 111.993 40.6774L68.4869 83.011Z"
-                        fill="#83DCD6" />
-                </svg>
+            <div class="result_count_container">
+                <div class="arrow arrow_row">
 
-                <button id="click_count_lines" class="btn">実行&コピー</button>
+                    <svg width="118" height="101" viewBox="0 0 118 101" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="0.246765" y="69.542" width="37.3308" height="68.1411" rx="5"
+                            transform="rotate(-90 0.246765 69.542)" fill="#83DCD6" />
+                        <path
+                            d="M110.646 46.5636C113.94 48.4955 113.94 53.2577 110.646 55.1896L51.5146 89.8689C48.1814 91.8237 43.9851 89.4201 43.9851 85.5559V16.1974C43.9851 12.3332 48.1814 9.92951 51.5146 11.8844L110.646 46.5636Z"
+                            fill="#83DCD6" />
+                    </svg>
+                    <button id="click_count_lines" class="btn">入力した行数をカウント</button>
+
+
+                </div>
+
+                <!-- <label for="field">▼結果</label> -->
+                <div class="result_count">
+                    <p class="font font_big" id="output_lines"></p>
+                </div>
             </div>
-            <p class="result">入力した行数は：</p>
 
-            <p class="font font_big" id="output_lines"></p>
     </div>
 
 
@@ -58,7 +71,7 @@
             <textarea class="textarea_line" rows="40" cols="30" id="textarea_removeLines"></textarea>
 
             <div class="arrow">
-                <svg width="130" height="87" viewBox="0 0 130 87" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg width="130" height="67" viewBox="0 0 130 87" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect x="41" width="48" height="50" rx="5" fill="#83DCD6" />
                     <path
                         d="M68.4869 83.011C66.5459 84.8997 63.4541 84.8997 61.5131 83.011L18.007 40.6774C14.7908 37.5479 17.0064 32.094 21.4939 32.094L108.506 32.094C112.994 32.094 115.209 37.5479 111.993 40.6774L68.4869 83.011Z"
@@ -67,11 +80,44 @@
 
                 <button id="click_remove_lines" class="btn">実行&コピー</button>
             </div>
+            <label for="field">▼結果</label>
             <p class="font font_sm" id="output_removed_lines"></p>
     </div>
 
+    <!-- HTML Escape =====================-->
+    <div class="container">
+        <h2>HTML Escape</h1>
+
+       
+        <h4>▼よく使われる特殊文字</h4>
+        <table class="tbl" width="30%">
+        <tbody><tr><th class="cell">記号</th><th class="cell">実体参照</th></tr> 
+        <tr><td>&lt;</td><td>&amp;lt;</td></tr> 
+        <tr><td>&gt;</td><td>&amp;gt;</td></tr> 
+        <tr><td>"</td><td>&amp;quot;</td></tr> 
+        <tr><td>'</td><td>&amp;apos;</td></tr> 
+        <tr><td>&amp;</td><td>&amp;amp;</td></tr> 
+
+    </tbody></table> 
+
+            <textarea class="textarea_line" rows="10" cols="30" id="textarea_html_escape"></textarea>
+
+            <div class="arrow">
+                <svg width="130" height="67" viewBox="0 0 130 87" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="41" width="48" height="50" rx="5" fill="#83DCD6" />
+                    <path
+                        d="M68.4869 83.011C66.5459 84.8997 63.4541 84.8997 61.5131 83.011L18.007 40.6774C14.7908 37.5479 17.0064 32.094 21.4939 32.094L108.506 32.094C112.994 32.094 115.209 37.5479 111.993 40.6774L68.4869 83.011Z"
+                        fill="#83DCD6" />
+                </svg>
+
+                <button id="click_html_escape" class="btn">実行&コピー</button>
+            </div>
+            <label for="field">▼Escaped HTML</label>
+            <p class="font font_sm" id="output_html_escape"></p>
+    </div>
+
     <!-- JS -->
-    <script type="text/javascript" src="../scripts/js_5.js"></script>
+    <script type="text/javascript" src="../scripts/js_6.js"></script>
 </body>
 
 </html>

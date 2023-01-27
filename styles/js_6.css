@@ -35,7 +35,7 @@ body > h1 {
   margin-top: 15px;
   margin-bottom: 15px;
   background: #f7f7f7;
-  border-left: solid #83dcd6 5px;
+  border-left: solid #605c56 5px;
   padding: 14px 12px;
   clear: both;
 }
@@ -44,6 +44,11 @@ body > h1 {
   margin-bottom: 45px;
   padding: 30px;
   padding-bottom: 22.5px;
+}
+.container label {
+  background-color: #605c56;
+  color: white;
+  padding: 0.3em 1em;
 }
 
 textarea {
@@ -58,11 +63,21 @@ textarea {
   font-size: 1rem;
 }
 
+/************************************
+** ボタン
+************************************/
 .arrow {
   display: flex;
   margin: 2em 0;
   align-items: center;
   justify-content: center;
+}
+.arrow_row {
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-right: 1em;
+  align-items: center;
 }
 
 .btn {
@@ -70,11 +85,25 @@ textarea {
   cursor: pointer;
   padding: 0.5em;
   font-weight: bold;
-  margin: 1em 0.2em;
+  margin: 0.2em;
   background: #83dcd6;
   border: none;
   border-bottom: 3px solid #5c9b97;
   border-radius: 10px;
+}
+
+.btn:hover {
+  transform: translateY(1px);
+}
+
+.btn:active {
+  border-bottom-color: transparent;
+  transform: translateY(3px);
+}
+
+.btn:focus {
+  -webkit-animation: flashing 1s ease infinite;
+          animation: flashing 1s ease infinite;
 }
 
 /************************************
@@ -83,16 +112,64 @@ textarea {
 .font {
   font-size: 2em;
   font-weight: 500;
+  overflow-wrap: break-word;
 }
 .font_big {
-  font-size: 3em;
+  font-size: 8em;
 }
 .font_sm {
   font-size: 1em;
 }
 
-.result {
-  float: left;
-  margin-left: 1rem;
-  margin-right: 1rem;
+.result_count {
+  margin: auto 1em;
+  padding: 1.5em;
+  display: flex;
+  justify-content: center;
+  width: 10%;
+}
+.result_count_container {
+  display: flex;
+}
+
+#output,
+#output_removed_lines,
+#output_html_escape {
+  padding: 2em 0.2em;
+  background-color: white;
+  box-shadow: 0 2px 6px rgba(19, 19, 19, 0.15), 0 -2px 4px rgba(19, 19, 19, 0.15);
+}
+
+/************************************
+** HTML Escape
+************************************/
+tr:nth-of-type(odd) {
+  background: #5c9b97;
+}
+
+table {
+  background: #83dcd6;
+  border-collapse: separate;
+  text-indent: initial;
+  border-spacing: 2px;
+  margin-top: 1em;
+  margin-bottom: 2em;
+}
+
+td {
+  padding: 0.5em;
+  empty-cells: show;
+  border: 1px solid #5c9b97;
+}
+
+.tbl th {
+  text-align: center;
+  padding: 2px;
+  empty-cells: show;
+  border: 1px solid #5c9b97;
+}
+
+th, td {
+  color: white;
+  font-weight: bold;
 }/*# sourceMappingURL=js_6.css.map */
