@@ -14,9 +14,9 @@
     <h1>JavaScriptで作る便利ツール</h1>
 
 
-    <!-- 空白削除ツール -->
+    <!-- Remove spaces from text -->
     <div class="container">
-        <h2>空白削除ツール</h1>
+        <h2>Remove spaces from text</h1>
             <!-- <label for="field">▼空白削除したい文字列を入力</label> -->
             <textarea rows="8" cols="30" id="textarea_remove_spaces"></textarea>
             <div class="arrow">
@@ -115,6 +115,26 @@
             <label for="field">▼Escaped HTML</label>
             <p class="font font_sm" id="output_html_escape"></p>
     </div>
+
+        <!-- HTML Unescape =====================-->
+        <div class="container">
+            <h2>HTML Unescape</h1>
+
+                <textarea class="textarea_line" rows="10" cols="30" id="textarea_html_Unescape"></textarea>
+    
+                <div class="arrow">
+                    <svg width="130" height="67" viewBox="0 0 130 87" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="41" width="48" height="50" rx="5" fill="#83DCD6" />
+                        <path
+                            d="M68.4869 83.011C66.5459 84.8997 63.4541 84.8997 61.5131 83.011L18.007 40.6774C14.7908 37.5479 17.0064 32.094 21.4939 32.094L108.506 32.094C112.994 32.094 115.209 37.5479 111.993 40.6774L68.4869 83.011Z"
+                            fill="#83DCD6" />
+                    </svg>
+    
+                    <button id="click_html_Unescape" class="btn">実行&コピー</button>
+                </div>
+                <label for="field">▼Escaped HTML</label>
+                <p class="font font_sm" id="output_html_Unescape"></p>
+        </div>
 
     <!-- JS -->
     <script type="text/javascript" src="../scripts/js_6.js"></script>

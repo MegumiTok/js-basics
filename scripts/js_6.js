@@ -1,5 +1,5 @@
 /************************************
- ** 空白削除ツール
+ ** Remove spaces from text
  ************************************/
 
 const removeSpaces = document.querySelector("#textarea_remove_spaces");
@@ -9,7 +9,6 @@ const clickRemoveSpaces = document.querySelector("#click_remove_spaces");
 function btnClick() {
   let str = removeSpaces.value;
   str = str.replace(/\s/g, "");
-  // str = str.replace(/\s+/g, '')
   output.innerText = str;
   navigator.clipboard.writeText(str);
 }
@@ -80,3 +79,34 @@ const btnClick_html_escape = () => {
 };
 
 clickHTMLEscape.addEventListener("click", btnClick_html_escape);
+
+/************************************
+ ** HTML Unescape
+ ************************************/
+//  参考にさせていただいたリンク:
+//  https://stackoverflow.com/questions/5251520/how-do-i-escape-some-html-in-javascript
+
+const htmlUnEscape = document.querySelector("#textarea_html_Unescape");
+const clickHTMLUnEscape = document.querySelector("#click_html_Unescape");
+const outputHTMLUnEscape = document.querySelector("#output_html_Unescape");
+
+function unescape(s) {
+  const lookup = {
+    "<": "&lt;", // <---- less than
+    ">": "&gt;", // <---- greater than
+    '"': "&quot;",
+    "'": "&apos;", // <---- アポストロフィ
+    "&": "&amp;", // <-- ampersand
+  };
+  return s.replace(/[&"'<>]/g, (c) => lookup[c]);
+}
+
+const btnClick_html_Unescape = () => {
+  const str = htmlUnEscape.value;
+  const result = unescape(str);
+  outputHTMLUnEscape.innerText = result;
+  //   console.log(result);
+  navigator.clipboard.writeText(result);
+};
+
+clickHTMLUnEscape.addEventListener("click", btnClick_html_Unescape);
