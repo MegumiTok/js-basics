@@ -34,6 +34,21 @@ body {
   margin-bottom: 50px;
   background: #f6f4f8;
   border-radius: 10px;
+  max-width: 600px;
+}
+.card p {
+  font-size: 1em;
+  font-weight: 300;
+}
+.card .card_lead {
+  font-size: 1.4em;
+  font-weight: 500;
+  margin-bottom: 0.8em;
+}
+
+.card_lead {
+  font-size: 1.4em;
+  font-weight: 500;
 }
 
 .card_title {
@@ -49,8 +64,121 @@ body {
 .container > h1 {
   font-size: 2em;
   margin-top: 1em;
-  margin-bottom: 1em;
   border-left: solid #605c56 5px;
   padding: 14px 12px;
   clear: both;
+}
+
+/************************************
+** input
+************************************/
+textarea {
+  width: 100%;
+  font-size: 2em;
+  box-shadow: 0 2px 6px rgba(19, 19, 19, 0.15), 0 -2px 4px rgba(19, 19, 19, 0.15);
+  resize: vertical;
+}
+
+/************************************
+** ボタン
+************************************/
+.arrow {
+  display: flex;
+  margin: 2em 0;
+  align-items: center;
+  justify-content: center;
+}
+.arrow_row {
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-right: 1em;
+  align-items: center;
+}
+
+.btn {
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 0.5em 1em;
+  font-weight: bold;
+  margin: 0.2em;
+  background: #83dcd6;
+  border: none;
+  border-bottom: 3px solid #5c9b97;
+  border-radius: 10px;
+  color: white;
+}
+.btn_copy {
+  margin: 1em;
+  max-width: 200px;
+  position: relative;
+  letter-spacing: 0.325em;
+  font-weight: bold;
+}
+
+.btn:hover {
+  transform: translateY(1px);
+}
+
+.btn:active {
+  border-bottom-color: transparent;
+  transform: translateY(3px);
+}
+
+.btn:focus {
+  -webkit-animation: flashing 1s ease infinite;
+          animation: flashing 1s ease infinite;
+}
+
+/************************************
+** 結果出力
+************************************/
+.font {
+  font-size: 2em;
+  font-weight: 500;
+  overflow-wrap: break-word;
+}
+.font_big {
+  font-size: 8em;
+}
+.font_sm {
+  font-size: 1em;
+}
+
+.result_wrapper {
+  background-color: white;
+  width: 100%;
+  min-height: 100px;
+  box-shadow: 0 2px 6px rgba(19, 19, 19, 0.15), 0 -2px 4px rgba(19, 19, 19, 0.15);
+}
+
+.result_space {
+  padding: 0.5em 0.5em;
+  background-color: white;
+}
+
+.result_title {
+  background-color: #605c56;
+  color: white;
+  padding: 0.3em 1em;
+}
+
+/************************************
+** コピーボタン
+************************************/
+.copiedtext {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(1em);
+  color: #605c56;
+  transition: all 0.5s;
+}
+
+.copied .copiedtext {
+  opacity: 1;
+  transform: translateY(3em);
 }/*# sourceMappingURL=shuffler.css.map */

@@ -10,18 +10,22 @@
 <body>
      
         <div class="container">
-            <h1>英文整序問題作成ツール</h1>
-            <a href="https://www.second-campus.com/90seijotest.cgi">参考元</a>
-            <label for="field" class="card_title">example</label>
+            <h1>整序問題作成ツール</h1>
+            <!-- <a href="https://www.second-campus.com/90seijotest.cgi">参考元</a> -->
+            <label for="field" class="card_title">How to use</label>
             <div class="card">
                 <!-- <p class="">▼入力例</p> -->
-                <p>▼ためしに以下の例をそのままコピペしてみてください</p>
-                <p>・これはペンです。</p>
-                <p>this is a pen.</p>
-                <p>・私も納豆が好きではありません。（１語不要）</p>
+                <!-- <h4>◆ためしに以下の例をそのままコピペしてみてください</h4> -->
+            
+                <p class="card_lead">this is a pen. ➡︎ (pen/is/a/this).</p>
+                <p>結果がランダムになってない場合はもう一度ボタンを押してみてください。</p>
+                <p>ボタンを押すたびに新しい整序問題が作成されます。</p>
+                <!-- <p>・私も納豆が好きではありません。（１語不要）</p>
                 <p>I don't like natto, either #too.</p>
+                <p>・ニューヨークは世界最大の都市の一つです。（１語補充）</p>
+                <p>New_York is one of the biggest cities ^in the world.</p> -->
             </div>
-                <textarea rows="8" cols="30" id="textarea_shuffle"></textarea>
+                <textarea rows="4" cols="30" id="textarea_shuffle"></textarea>
                 <div class="arrow">
                     <svg width="130" height="67" viewBox="0 0 130 87" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <rect x="41" width="48" height="50" rx="5" fill="#83DCD6" />
@@ -30,13 +34,16 @@
                             fill="#83DCD6" />
                     </svg>
     
-                    <button id="click_shuffle" class="btn">実行</button>
+                    <button id="click_shuffle" class="btn">並べ替え</button>
                 </div>
           
-                <label for="field">▼結果</label>
-                <div class="result_wrapper">
+                <label for="field" class="result_title">▼ 結果</label>
+                <!-- <div class="result_wrapper">
                 <p class="font result_space" id="output"></p>
-                </div>
+                </div> -->
+                <textarea class="font result_space" id="output" placeholder=""></textarea>
+                <button id="btn_copy" class="btn btn_copy"> 結果をコピー<span class="copiedtext"
+                    aria-hidden="true">Copied</span></button>
         </div>
     
     <!-- js --------------------------------->
