@@ -8,7 +8,8 @@ const btnCopy = document.querySelector("#btn_copy");
 function btnClick() {
   let str = pTag.value;
   str = str.replace(/^/gm, "<p>").replace(/$/gm, "</p>");
-  output.innerText = str;
+
+  output.innerText = str; //textarea内で改行が消えてしまう
 }
 
 function clickCopy() {
