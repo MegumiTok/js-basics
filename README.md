@@ -29,3 +29,9 @@
 ![Add p tag](./assets/pTag.gif)
 
 - 出力は改行されていません。VSCodeなどのエディタで自動フォーマットすればいいかな、と思います(textarea内での改行の仕方がわかれば直すかもです！）
+
+## Shuffle Words Generator
+
+![Shuffler](./assets/shuffler.gif)
+
+- 英語の学習用に作りました。
