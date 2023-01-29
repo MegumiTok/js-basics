@@ -65,6 +65,10 @@ textarea {
 .tips {
   margin-bottom: 30px;
 }
+.tips .line-through {
+  -webkit-text-decoration-line: line-through;
+          text-decoration-line: line-through;
+}
 
 /************************************
 ** ボタン

@@ -72,8 +72,15 @@ function escape(s) {
   return s.replace(/[&"'<>]/g, (c) => lookup[c]);
 }
 
+function removeWhitespaceFromTop(string) {
+  return string.replace(/^\s+/g, "");
+}
+
 const btnClick_html_escape = () => {
-  const str = htmlEscape.value;
+  // const str = htmlEscape.value;
+  console.log(htmlEscape.value);
+  const str = removeWhitespaceFromTop(htmlEscape.value); // 入力された文字の冒頭に空白があったら取り除く
+  console.log(str);
   const result = escape(str);
   outputHTMLEscape.innerText = result;
   // console.log(result);
@@ -95,11 +102,7 @@ function unescape(s) {
     Object.entries(lookup).map(([k, v]) => [v, k])
   );
 
-  return s.replace(
-    // /["&lt;", "&gt;", "&quot;", "&apos;", "&amp;"]/g,// 間違い
-    /&amp;|&lt;|&gt;|&quot;|&#039;/g,
-    (c) => lookup_reverse[c]
-  );
+  return s.replace(/&amp;|&lt;|&gt;|&quot;|&#039;/g, (c) => lookup_reverse[c]);
 }
 
 const btnClick_html_Unescape = () => {
