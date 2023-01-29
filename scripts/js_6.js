@@ -59,14 +59,16 @@ const htmlEscape = document.querySelector("#textarea_html_escape");
 const clickHTMLEscape = document.querySelector("#click_html_escape");
 const outputHTMLEscape = document.querySelector("#output_html_escape");
 
+const lookup = {
+  "<": "&lt;", // <---- less than
+  ">": "&gt;", // <---- greater than
+  '"': "&quot;",
+  // "'": "&apos;",
+  "'": "&#039;", // <---- アポストロフィ
+  "&": "&amp;", // <-- ampersand
+};
+
 function escape(s) {
-  const lookup = {
-    "<": "&lt;", // <---- less than
-    ">": "&gt;", // <---- greater than
-    '"': "&quot;",
-    "'": "&apos;", // <---- アポストロフィ
-    "&": "&amp;", // <-- ampersand
-  };
   return s.replace(/[&"'<>]/g, (c) => lookup[c]);
 }
 
@@ -74,7 +76,7 @@ const btnClick_html_escape = () => {
   const str = htmlEscape.value;
   const result = escape(str);
   outputHTMLEscape.innerText = result;
-  //   console.log(result);
+  // console.log(result);
   navigator.clipboard.writeText(result);
 };
 
@@ -83,29 +85,29 @@ clickHTMLEscape.addEventListener("click", btnClick_html_escape);
 /************************************
  ** HTML Unescape
  ************************************/
-//  参考にさせていただいたリンク:
-//  https://stackoverflow.com/questions/5251520/how-do-i-escape-some-html-in-javascript
 
 const htmlUnEscape = document.querySelector("#textarea_html_Unescape");
 const clickHTMLUnEscape = document.querySelector("#click_html_Unescape");
 const outputHTMLUnEscape = document.querySelector("#output_html_Unescape");
 
 function unescape(s) {
-  const lookup = {
-    "<": "&lt;", // <---- less than
-    ">": "&gt;", // <---- greater than
-    '"': "&quot;",
-    "'": "&apos;", // <---- アポストロフィ
-    "&": "&amp;", // <-- ampersand
-  };
-  return s.replace(/[&"'<>]/g, (c) => lookup[c]);
+  const lookup_reverse = Object.fromEntries(
+    Object.entries(lookup).map(([k, v]) => [v, k])
+  );
+
+  return s.replace(
+    // /["&lt;", "&gt;", "&quot;", "&apos;", "&amp;"]/g,// 間違い
+    /&amp;|&lt;|&gt;|&quot;|&#039;/g,
+    (c) => lookup_reverse[c]
+  );
 }
 
 const btnClick_html_Unescape = () => {
   const str = htmlUnEscape.value;
   const result = unescape(str);
+  console.log(result);
   outputHTMLUnEscape.innerText = result;
-  //   console.log(result);
+
   navigator.clipboard.writeText(result);
 };
 
