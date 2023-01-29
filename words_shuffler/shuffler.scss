@@ -1,0 +1,78 @@
+@import 'https://fonts.googleapis.com/css?family=Montserrat:300,400,700';
+
+
+// $spacing: 15px;
+$b: #83dcd6;
+$brown: #605c56;
+
+/************************************
+** リセット
+************************************/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+    // color: #3b4043;
+    color: $brown;
+    font-family: Montserrat, sans-serif;
+    width: 80vw;
+    height: 100%;
+    margin: 3em auto;
+    background-color: #f7dbdc;
+}
+
+.container{
+    display: flex;
+    background-color: white;
+    border-radius: 24px;
+    flex-direction: column;
+
+    border: 1px solid #f1f0ec;
+    // align-items: center;
+    // max-width: 740px;
+    padding: 1em 2em 3em;
+}
+
+// .container>h1{
+//     background-image: linear-gradient(90deg,$b,$b);
+//     background-position: 0 18.5px;
+//     background-repeat: no-repeat;
+// }
+
+
+.card{
+    padding: 1em;
+    margin-bottom: 50px;
+    background: #f6f4f8;
+    border-radius: 10px;
+}
+
+.card_title {
+    display: inline-block;
+    // transform: rotate(-8deg);
+    transform: translateY(0.5em);
+    color: #b7a8cc;
+    font-family: cursive;
+    font-size: 2.3rem;
+    // line-height: 2;
+    letter-spacing: 0.03em;
+    font-weight: bold;
+    // padding-bottom: .2em;
+}
+
+.container>h1 {
+    font-size: 2em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    border-left: solid $brown 5px;
+    padding: 14px 12px;
+    clear: both;
+
+}
+
+

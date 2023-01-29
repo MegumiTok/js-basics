@@ -106,7 +106,8 @@ function unescape(s) {
 }
 
 const btnClick_html_Unescape = () => {
-  const str = htmlUnEscape.value;
+  // const str = htmlUnEscape.value;
+  const str = removeWhitespaceFromTop(htmlEscape.value); // 入力された文字の冒頭に空白があったら取り除く
   const result = unescape(str);
   console.log(result);
   outputHTMLUnEscape.innerText = result;

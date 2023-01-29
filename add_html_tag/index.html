@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>add_html_tag</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Add p tag at the beginning/end of each line </h1>
+        <label for="field" class="card_title">example</label>
+        <div class="card">
+            <p>This is a pen.</p>
+            <p>⬇︎</p>
+            <p>&lt;p&gt;This is a pen.&lt;/p&gt;</p>
+
+        </div>
+        <textarea rows="4" cols="30" id="textarea_pTag"  placeholder=""></textarea>
+        <div class="arrow">
+            <svg width="130" height="67" viewBox="0 0 130 87" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="41" width="48" height="50" rx="5" fill="#83DCD6" />
+                <path
+                    d="M68.4869 83.011C66.5459 84.8997 63.4541 84.8997 61.5131 83.011L18.007 40.6774C14.7908 37.5479 17.0064 32.094 21.4939 32.094L108.506 32.094C112.994 32.094 115.209 37.5479 111.993 40.6774L68.4869 83.011Z"
+                    fill="#83DCD6" />
+            </svg>
+
+            <button id="click_pTag" class="btn">実行</button>
+          
+        </div>
+
+        <label for="field" class="result_title">▼ 結果</label>
+        <!-- <div class="result_wrapper">
+            <p class="font result_space" id="output"></p>
+        </div> -->
+
+        <textarea
+        class="font result_space"
+        id="output"
+        placeholder=""
+    ></textarea>
+        <button id="btn_copy" class="btn btn_copy"> 結果をコピー<span class="copiedtext" aria-hidden="true">Copied</span></button>
+    </div>
+
+    <!-- js --------------------------------->
+    <script src="./index.js"></script>
+</body>
+
+</html>

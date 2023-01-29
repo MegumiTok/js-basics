@@ -1,0 +1,199 @@
+@import 'https://fonts.googleapis.com/css?family=Montserrat:300,400,700';
+
+
+// $spacing: 15px;
+$b: #83dcd6;
+$brown: #605c56;
+$purple:#f6f4f8;
+
+/************************************
+** リセット
+************************************/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+    // color: #3b4043;
+    color: $brown;
+    font-family: Montserrat, sans-serif;
+    width: 80vw;
+    height: 100%;
+    margin: 3em auto;
+    background-color: #f7dbdc;
+}
+
+.container{
+    display: flex;
+    background-color: white;
+    border-radius: 24px;
+    flex-direction: column;
+
+    border: 1px solid #f1f0ec;
+    // align-items: center;
+    // max-width: 740px;
+    padding: 1em 2em 3em;
+}
+
+// .container>h1{
+//     background-image: linear-gradient(90deg,$b,$b);
+//     background-position: 0 18.5px;
+//     background-repeat: no-repeat;
+// }
+
+
+.card{
+    padding: 1em;
+    margin-bottom: 50px;
+    background: $purple;
+    border-radius: 10px;
+}
+
+.card_title {
+    display: inline-block;
+    // transform: rotate(-8deg);
+    transform: translateY(0.5em);
+    color: #b7a8cc;
+    font-family: cursive;
+    font-size: 2.3rem;
+    // line-height: 2;
+    letter-spacing: 0.03em;
+    font-weight: bold;
+    // padding-bottom: .2em;
+}
+
+.container>h1 {
+    font-size: 2em;
+    margin-top: 1em;
+    border-left: solid $brown 5px;
+    padding: 14px 12px;
+    clear: both;
+
+}
+
+/************************************
+** input
+************************************/
+textarea {
+    width: 100%;
+    font-size: 2em;
+    box-shadow: 0 2px 6px rgb(19 19 19 / 15%), 0 -2px 4px rgb(19 19 19 / 15%);
+    resize: vertical; // <---　ポイント
+}
+
+// textarea:focus {
+//     border-color: #e0ff43;
+// }
+
+/************************************
+** ボタン
+************************************/
+.arrow {
+    display: flex;
+    margin: 2em 0;
+    align-items: center;
+    justify-content: center;
+
+    &_row {
+        justify-content: flex-start;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-right: 1em;
+        align-items: center;
+    }
+}
+
+.btn {
+    font-size: 1rem;
+    cursor: pointer;
+    padding: .5em 1em;
+    font-weight: bold;
+    margin: .2em;
+    background: $b;
+    border: none;
+    border-bottom: 3px solid #5c9b97;
+    border-radius: 10px;
+    color: white;
+
+    &_copy{
+        margin: 1em;
+        width: 20%;
+        position: relative;
+        letter-spacing: 0.325em;
+        font-weight: bold;
+    }
+
+}
+
+.btn:hover {
+    transform: translateY(1px)
+}
+
+.btn:active {
+    border-bottom-color: transparent;
+    transform: translateY(3px)
+}
+
+.btn:focus {
+    animation: flashing 1s ease infinite
+}
+
+/************************************
+** 結果出力
+************************************/
+.font {
+    font-size: 2em;
+    font-weight: 500;
+    overflow-wrap: break-word;
+
+    &_big {
+        font-size: 8em;
+    }
+
+    &_sm {
+        font-size: 1em;
+    }
+}
+
+.result_wrapper{
+    background-color: white;
+    width: 100%;
+    min-height: 100px;
+    box-shadow: 0 2px 6px rgb(19 19 19 / 15%), 0 -2px 4px rgb(19 19 19 / 15%);
+}
+.result_space {
+    padding: .5em .5em;
+
+    background-color: white;
+    // box-shadow: 0 2px 6px rgb(19 19 19 / 15%), 0 -2px 4px rgb(19 19 19 / 15%);
+}
+
+.result_title {
+    background-color: #605c56;
+    color: white;
+    padding: .3em 1em;
+    // width: 15%;
+}
+
+/************************************
+** コピーボタン
+************************************/
+.copiedtext {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(1em);
+    color: $brown;
+    transition: all 0.5s;
+}
+.copied .copiedtext { //copiedはボタンを押すと現れるクラス(JS参照)
+    opacity: 1;
+    transform: translateY(3em);
+} 
