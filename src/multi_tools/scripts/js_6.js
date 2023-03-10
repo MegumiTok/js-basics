@@ -116,3 +116,25 @@ const btnClick_html_Unescape = () => {
 };
 
 clickHTMLUnEscape.addEventListener("click", btnClick_html_Unescape);
+
+/************************************
+ ** 改行を取り除く
+ ************************************/
+
+const htmlOne = document.querySelector("#textarea_one");
+const clickHTMLOne = document.querySelector("#click_one");
+const outputHTMLOne = document.querySelector("#output_one");
+
+const removeLineBreaks = document.querySelector("#textarea_one");
+const clickRemoveLinesBreaks = document.querySelector("#click_one");
+const outputRemoveLinesBreaks = document.querySelector("#output_one");
+const btnClick_remove_lines_breaks = () => {
+  const str = removeLineBreaks.value;
+  const result = str.replace(/\r\n|\r|\n/gm, "s");
+
+  outputRemoveLinesBreaks.innerText = result;
+  //   console.log(result);
+  navigator.clipboard.writeText(result);
+};
+
+clickRemoveLinesBreaks.addEventListener("click", btnClick_remove_lines_breaks);
