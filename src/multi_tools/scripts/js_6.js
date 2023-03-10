@@ -130,7 +130,7 @@ const clickRemoveLinesBreaks = document.querySelector("#click_one");
 const outputRemoveLinesBreaks = document.querySelector("#output_one");
 const btnClick_remove_lines_breaks = () => {
   const str = removeLineBreaks.value;
-  const result = str.replace(/\r\n|\r|\n/gm, "s");
+  const result = str.replace(/\r\n|\r|\n/gm, " ");
 
   outputRemoveLinesBreaks.innerText = result;
   //   console.log(result);
