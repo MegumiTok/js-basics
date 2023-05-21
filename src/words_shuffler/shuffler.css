@@ -36,7 +36,8 @@ body {
   border-radius: 10px;
   max-width: 600px;
 }
-.card p {
+.card li {
+  margin-left: 1em;
   font-size: 1em;
   font-weight: 300;
 }
@@ -126,8 +127,7 @@ textarea {
 }
 
 .btn:focus {
-  -webkit-animation: flashing 1s ease infinite;
-          animation: flashing 1s ease infinite;
+  animation: flashing 1s ease infinite;
 }
 
 /************************************

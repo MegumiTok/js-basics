@@ -112,8 +112,7 @@ textarea {
 }
 
 .btn:focus {
-  -webkit-animation: flashing 1s ease infinite;
-          animation: flashing 1s ease infinite;
+  animation: flashing 1s ease infinite;
 }
 
 /************************************

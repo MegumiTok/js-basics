@@ -35,5 +35,20 @@ function clickCopy() {
   }
   return false;
 }
+
+// エンターキーでも並び替えを行える
+// Shift+Enterで改行できる
+function submitOnEnter(event) {
+  if (event.which === 13 && !event.shiftKey) {
+    if (!event.repeat) {
+      btnClick();
+    }
+
+    event.preventDefault(); // Prevents the addition of a new line in the text field
+  }
+}
+
+shuffle.addEventListener("keydown", submitOnEnter);
+
 click_shuffle.addEventListener("click", btnClick);
 btnCopy.addEventListener("click", clickCopy);

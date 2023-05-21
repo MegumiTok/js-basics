@@ -66,8 +66,7 @@ textarea {
   margin-bottom: 30px;
 }
 .tips .line-through {
-  -webkit-text-decoration-line: line-through;
-          text-decoration-line: line-through;
+  text-decoration-line: line-through;
 }
 
 /************************************
@@ -109,8 +108,7 @@ textarea {
 }
 
 .btn:focus {
-  -webkit-animation: flashing 1s ease infinite;
-          animation: flashing 1s ease infinite;
+  animation: flashing 1s ease infinite;
 }
 
 /************************************

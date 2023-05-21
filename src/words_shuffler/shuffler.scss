@@ -4,7 +4,7 @@
 // $spacing: 15px;
 $b: #83dcd6;
 $brown: #605c56;
-$purple:#f6f4f8;
+$purple: #f6f4f8;
 
 /************************************
 ** リセット
@@ -12,12 +12,12 @@ $purple:#f6f4f8;
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-body{
+body {
     // color: #3b4043;
     color: $brown;
     font-family: Montserrat, sans-serif;
@@ -27,7 +27,7 @@ body{
     background-color: #f7dbdc;
 }
 
-.container{
+.container {
     display: flex;
     background-color: white;
     border-radius: 24px;
@@ -41,27 +41,28 @@ body{
 
 
 
-.card{
+.card {
     padding: 1em;
     margin-bottom: 50px;
     background: $purple;
     border-radius: 10px;
     max-width: 600px;
 
-    p{
+    li {
+        margin-left: 1em;
         font-size: 1em;
         font-weight: 300;
     }
 
-    .card_lead{
+    .card_lead {
         font-size: 1.4em;
         font-weight: 500;
         margin-bottom: .8em;
     }
-    
+
 }
 
-.card_lead{
+.card_lead {
     font-size: 1.4em;
     font-weight: 500;
 }
@@ -134,7 +135,7 @@ textarea {
     border-radius: 10px;
     color: white;
 
-    &_copy{
+    &_copy {
         margin: 1em;
         max-width: 200px;
         position: relative;
@@ -174,12 +175,13 @@ textarea {
     }
 }
 
-.result_wrapper{
+.result_wrapper {
     background-color: white;
     width: 100%;
     min-height: 100px;
     box-shadow: 0 2px 6px rgb(19 19 19 / 15%), 0 -2px 4px rgb(19 19 19 / 15%);
 }
+
 .result_space {
     padding: .5em .5em;
 
@@ -208,7 +210,9 @@ textarea {
     color: $brown;
     transition: all 0.5s;
 }
-.copied .copiedtext { //copiedはボタンを押すと現れるクラス(JS参照)
+
+.copied .copiedtext {
+    //copiedはボタンを押すと現れるクラス(JS参照)
     opacity: 1;
     transform: translateY(3em);
-} 
+}
