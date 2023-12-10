@@ -10,10 +10,6 @@ HTTPSで暗号通信をして、``https://localhost:8080``にアクセスでき�
 | ------------ | -----------|
 | ![Remove blank lines](../assets/img01.png)      | ![Remove blank lines](../assets/img02.png) | 
 
-▼ before
-
-
-
 ## サーバーで直接生成する方法 (WIP)
 
 ```sh

@@ -2,9 +2,11 @@
 
 気まぐれに自分が欲しいツールを自作しています。正規表現便利！
 
-[Dockerを使用して、ローカルのHTMLファイルをWebサーバー上でホストしてみました](./blog/docker.md)
+[Dockerを使用して、ローカルのHTMLファイルをWebサーバー上でホストしてみた](./blog/docker.md)
 
-[HTTPS通信に対応しました](./blog/ssl.md)
+[HTTPS通信に対応させてみた](./blog/ssl.md)
+
+next.js で作り直そうか考え中。。けどこの小学生が作りました感が逆にいい。
 
 ```sh
 docker compose up -d
