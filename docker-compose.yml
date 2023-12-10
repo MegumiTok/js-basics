@@ -1,0 +1,10 @@
+version: '3.8'
+services:
+  mynginx:
+    container_name: js-basics-container
+    build: .
+    ports:
+      - 8081:443
+    volumes:
+      - ./nginx:/etc/nginx/conf.d
+      - ./ssl:/etc/nginx/ssl

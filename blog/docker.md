@@ -23,6 +23,7 @@ COPY ./src /usr/share/nginx/html
 ```
 
 今回は、src ディレクトリ内のすべてのファイル（HTML、CSS、JavaScript、その他のファイル）をコンテナ内の Nginx のドキュメントルートにコピーします。
+nginxを動作させた段階では、nginxデフォルトのhtmlが表示されますので、自分で作ったhtmlにかえています。
 
 ## Dockerイメージのビルド
 
@@ -37,7 +38,7 @@ docker build -t <付けたいイメージの名前> .
 ビルドしたイメージからコンテナを起動するコマンド：
 
 ```sh
-docker run -d --name 付けたいコンテナの名前 -p 8080:80 my-html-app
+docker container run -d --name 付けたいコンテナの名前 -p 8080:80 my-html-app
 ```
 
 これにより、``http://localhost:8080/`` でHTMLファイルにアクセスできるようになります。
@@ -60,6 +61,8 @@ docker rm js-basics-container
 docker run -d --name js-basics-container -p 8080:80 js-basics
 ```
 
+You can stop and remove a container in a single command by adding the "force" flag to the docker rm command. For example:` docker rm -f <the-container-id>`
+
 ## デバッグ
 
 コンテナ内でファイルが正しく配置されているかを確認するために、コンテナのシェルにアクセスし、`ls /usr/share/nginx/html` でファイルを確認
@@ -70,3 +73,27 @@ docker exec -it js-basics-container /bin/sh
 ls /usr/share/nginx/html
 50x.html  add_html_tag	index.css  index.css.map  index.html  index.scss  multi_tools  nsxtjs  words_shuffler
 ```
+
+## 作成したコンテナは以下コマンドで停止・起動
+
+```sh
+% docker ps
+CONTAINER ID   IMAGE       COMMAND                  CREATED        STATUS        PORTS                  NAMES
+4f23e63cc6ad   js-basics   "nginx -g 'daemon of…"   11 hours ago   Up 11 hours   0.0.0.0:8080->80/tcp   js-basics-container
+
+% docker container stop js-basics-container
+js-basics-container
+
+% docker ps        
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+
+% docker container start js-basics-container
+js-basics-container
+
+% docker ps
+CONTAINER ID   IMAGE       COMMAND                  CREATED        STATUS         PORTS                  NAMES
+4f23e63cc6ad   js-basics   "nginx -g 'daemon of…"   11 hours ago   Up 4 seconds   0.0.0.0:8080->80/tcp   js-basics-container
+```
+
+## Docker＋nginxでHTTPS通信ができるようにする
+
