@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript basics</title>
+<!--    <link rel="stylesheet" href="../css/01.css">-->
+    <style>
+        @import 'https://fonts.googleapis.com/css?family=Montserrat:300,400,700';
+
+        body {
+            padding: 0;
+            margin: 30px auto;
+            background-color: #f7dbdc;
+            width: 80vw;
+            font-size: 20px;
+            font-family: Montserrat, sans-serif;
+        }
+
+        .container>h2 {
+            /*font-size: 2em;*/
+            margin-top: 15px;
+            margin-bottom: 15px;
+            background: #f7f7f7;
+            border-left: solid #dadada 5px;
+            padding: 14px 12px;
+            clear: both;
+        }
+
+        .container {
+            padding: 30px ;
+        }
+        .target {
+            overflow: scroll;
+            width: 500px;
+            background: #dadada;
+        }
+        .sample {
+            white-space: nowrap;
+        }
+        .description {
+            margin: 15px;
+        }
+    </style>
+</head>
+
+<body>
+<h1>scrollLeftで要素内の横スクロール量を取得する</h1>
+<p>参考：https://web-tsuku.life/scrollleft/#i-3</p>
+<div class="description">
+    <p>Element.scrollLeft プロパティは、要素の内容が左端からスクロールするピクセル数を取得または設定します。</p>
+    <p>- 要素がスクロールできない場合（例えば、はみ出した部分がない場合）、 scrollLeft は 0 に設定されます。</p>
+    <p>- 指定された値が 0 より小さかったら（右書きの要素では 0 より大きかったら）、 scrollLeft は 0 に設定されます。</p>
+    <p>- 指定された値が、コンテンツがスクロールできる最大値を超えていたら、 scrollLeft は最大値に設定されます。</p>
+</div>
+
+<div class="container">
+<h2>横スクロール量を取得する</h2>
+<div id="target" class="target">
+    <div id="sample" class="sample">
+        <p>
+            「じゅげむじゅげむ　ごこうのすりきれ　かいじゃりすいぎょのすいぎょうまつうんらいまつふうらいまつ　くうねるところにすむところ　やぶらこうじのぶらこうじ　ぱいぽぱいぽぱいぽのしゅーりんがん　しゅーりんがんのぐーりんだい　ぐーりんだいのぽんぽこぴーのぽんぽこなのちょうきゅうめいのちょうすけ</p>
+    </div>
+</div>
+<button onclick="countScroll();">スクロール量確認</button>
+<div>スクロール量：<span id="output"></span></div>
+</div>
+
+<div class="container">
+    <h2>指定した横スクロール位置へ移動</h2>
+    <div id="target2" class="target">
+        <div class="sample">
+            <p>
+                「じゅげむじゅげむ　ごこうのすりきれ　かいじゃりすいぎょのすいぎょうまつうんらいまつふうらいまつ　くうねるところにすむところ　やぶらこうじのぶらこうじ　ぱいぽぱいぽぱいぽのしゅーりんがん　しゅーりんがんのぐーりんだい　ぐーりんだいのぽんぽこぴーのぽんぽこなのちょうきゅうめいのちょうすけ
+            </p>
+        </div>
+    </div>
+    <button onclick="moveScroll();">移動</button>
+
+</div>
+
+<div class="container">
+    <h2>scrollイベントを監視</h2>
+    <div id="target3" class="target">
+        <div class="sample">
+            <p>
+                「じゅげむじゅげむ　ごこうのすりきれ　かいじゃりすいぎょのすいぎょうまつうんらいまつふうらいまつ　くうねるところにすむところ　やぶらこうじのぶらこうじ　ぱいぽぱいぽぱいぽのしゅーりんがん　しゅーりんがんのぐーりんだい　ぐーりんだいのぽんぽこぴーのぽんぽこなのちょうきゅうめいのちょうすけ
+            </p>
+        </div>
+    </div>
+    <div>スクロール量：<span id="output3"></span></div>
+    <button onclick="moveScroll3();">移動</button>
+</div>
+<!-- JS -->
+<script type="text/javascript" src="../js/01.js"></script>
+</body>
+
+</html>

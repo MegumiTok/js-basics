@@ -94,6 +94,3 @@ js-basics-container
 CONTAINER ID   IMAGE       COMMAND                  CREATED        STATUS         PORTS                  NAMES
 4f23e63cc6ad   js-basics   "nginx -g 'daemon of…"   11 hours ago   Up 4 seconds   0.0.0.0:8080->80/tcp   js-basics-container
 ```
-
-## Docker＋nginxでHTTPS通信ができるようにする
-
